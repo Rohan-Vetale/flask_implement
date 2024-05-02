@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />    
+</head>
+<body >
+<div class="container" >
+    <div class="row" style="padding:50px;">
+        <p><h1>Manual Login</h1></p>
+        <form action="/submit_login" method="POST">
+            <div class="mb-3">
+              <label class="form-label">Username:</label>
+              <input type="text" id="username" name="username" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password:</label>
+                <input type="text" id="password_hash" name="password_hash" class="form-control">
+            </div>
+            <br/><br/>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+   </div>
+</div>
+</body>
+</html>

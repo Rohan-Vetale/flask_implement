@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            margin: 0;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <h1>User Authentication</h1>
+        <button onclick="location.href='/register'">Register</button>
+        <button onclick="location.href='/login'">Login</button>
+        <button onclick="location.href='/oauth-login'">OAuth Login</button>
+    </div>
+</body>
+</html>
