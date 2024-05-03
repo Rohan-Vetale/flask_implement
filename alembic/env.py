@@ -3,8 +3,8 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from settings import DATABASE_DIALECT, DATABASE_DRIVER, DATABASE_NAME, DATABASE_PASSWORD, DATABASE_USERNAME, DEFAULT_PORT, HOST
-from model import Base
 from alembic import context
+from app import User
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -21,7 +21,7 @@ if config.config_file_name is not None:
 config.set_section_option("alembic", "sqlalchemy.url",
                           f"{DATABASE_DIALECT}+{DATABASE_DRIVER}://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@{HOST}:{DEFAULT_PORT}/{DATABASE_NAME}")
 
-target_metadata = Base.metadata
+target_metadata = User.metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
